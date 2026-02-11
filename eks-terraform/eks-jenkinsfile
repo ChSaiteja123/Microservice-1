@@ -17,6 +17,12 @@ pipeline {
         }
 
         stage('Terraform version') {
+            agent {
+                docker {
+                    image 'hashicorp/terraform:1.6'
+                    reuseNode true
+                }
+            }        
             steps {
                 sh 'terraform --version'
             }
