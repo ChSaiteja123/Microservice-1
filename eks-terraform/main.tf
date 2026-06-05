@@ -186,7 +186,7 @@ resource "aws_eks_node_group" "node-grp" {
   }
 
   tags = {
-    Name = "project-eks-node-group"
+    Name = "project-eks-node-1"
   }
 
   scaling_config {
