@@ -38,7 +38,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSVPCResourceController" {
 # IAM Role for Worker Nodes
 # ----------------------------
 resource "aws_iam_role" "worker" {
-  name = "sai-eks-master-1"
+  name = "sai-eks-master-2"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
