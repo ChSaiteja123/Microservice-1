@@ -7,15 +7,15 @@ provider "aws" {
 # IAM Role for EKS Cluster
 # ----------------------------
 resource "aws_iam_role" "master" {
-  name = "sai-eks-master-1"
+  name = "sai-eks-master-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [{
-      Effect = "Allow",
+      Effect = "Allow"
       Principal = {
         Service = "eks.amazonaws.com"
-      },
+      }
       Action = "sts:AssumeRole"
     }]
   })
