@@ -9,8 +9,7 @@ provider "aws" {
 resource "aws_iam_role" "master" {
   name = "sai-eks-master-1"
 
-  assume_role_policy = <<EOF
-{
+  assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [{
       Effect = "Allow",
@@ -19,8 +18,7 @@ resource "aws_iam_role" "master" {
       },
       Action = "sts:AssumeRole"
     }]
-  }
-EOF
+  })
 }
 
 resource "aws_iam_role_policy_attachment" "AmazonEKSClusterPolicy" {
