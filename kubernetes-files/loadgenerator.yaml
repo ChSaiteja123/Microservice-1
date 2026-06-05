@@ -42,7 +42,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 295933007553.dkr.ecr.us-east-1.amazonaws.com/loadgenerator:11
+        image: 295933007553.dkr.ecr.us-east-1.amazonaws.com/loadgenerator:12
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -55,7 +55,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: 295933007553.dkr.ecr.us-east-1.amazonaws.com/loadgenerator:11
+        image: 295933007553.dkr.ecr.us-east-1.amazonaws.com/loadgenerator:12
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
