@@ -106,7 +106,7 @@ resource "aws_iam_role_policy_attachment" "autoscaler" {
 
 resource "aws_iam_instance_profile" "worker" {
   depends_on = [aws_iam_role.worker]
-  name       = "yaswanth-eks-worker-profile1"
+  name       = "sai-eks-worker-profile1"
   role       = aws_iam_role.worker.name
 }
 
@@ -156,7 +156,7 @@ resource "aws_eks_cluster" "eks" {
   }
 
   tags = {
-    Name        = "yaswanth-eks-cluster"
+    Name        = "sai-eks-cluster"
     Environment = "dev"
     Terraform   = "true"
   }
@@ -179,7 +179,7 @@ resource "aws_eks_node_group" "node-grp" {
   subnet_ids      = [data.aws_subnet.subnet-1.id, data.aws_subnet.subnet-2.id]
   capacity_type   = "ON_DEMAND"
   disk_size       = 20
-  instance_types  = ["t2.large"]
+  instance_types  = ["c7i-flex.large"]
 
   labels = {
     env = "dev"
@@ -191,7 +191,7 @@ resource "aws_eks_node_group" "node-grp" {
 
   scaling_config {
     desired_size = 3
-    max_size     = 10
+    max_size     = 5
     min_size     = 2
   }
 
