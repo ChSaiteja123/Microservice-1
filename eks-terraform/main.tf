@@ -104,7 +104,7 @@ resource "aws_iam_role_policy_attachment" "autoscaler" {
 
 resource "aws_iam_instance_profile" "worker" {
   depends_on = [aws_iam_role.worker]
-  name       = "sai-eks-worker-profile2"
+  name       = "sai-eks-worker-profile_a"
   role       = aws_iam_role.worker.name
 }
 
