@@ -3,10 +3,10 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "bucket1" {
-  bucket = "saibucket-1"
+  bucket = "saibucketcicd-1"
 
   tags = {
-    Name        = "saibucket-1"
+    Name        = "saibucketcicd-1"
     Environment = "dev"
   }
 }
@@ -19,10 +19,10 @@ resource "aws_s3_bucket_versioning" "bucket1_versioning" {
 }
 
 resource "aws_s3_bucket" "bucket2" {
-  bucket = "saibucket-2"
+  bucket = "saibucketcicd-2"
 
   tags = {
-    Name        = "saibucket-1"
+    Name        = "saibucketcicd-1"
     Environment = "dev"
   }
 }
