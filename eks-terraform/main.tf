@@ -5,7 +5,7 @@ provider "aws" {
 # IAM Role for EKS Cluster
 # ----------------------------
 resource "aws_iam_role" "master" {
-  name = "sai-eks-master-role_1"
+  name = "sai-eks-master-role_A"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
@@ -38,7 +38,7 @@ resource "aws_iam_role_policy_attachment" "AmazonEKSVPCResourceController" {
 # IAM Role for Worker Nodes
 # ----------------------------
 resource "aws_iam_role" "worker" {
-  name = "sai-eks-master-2"
+  name = "sai-eks-master-B"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
