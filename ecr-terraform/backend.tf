@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "saitej-2"
+    bucket = "saibucketcicd-2"
     key    = "ecr/terraform.tfstate"
     region = "us-east-1"
   }
